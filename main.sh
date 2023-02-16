@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Install Homebrew
 if type "brew" > /dev/null 2>&1; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -11,3 +13,10 @@ cp .Brewfile ~/.Brewfile
 brew tap homebrew/cask-fonts
 brew update
 brew bundle --global
+
+# Install Node.js
+asdf plugin list | grep "nodejs"
+if [ ! $? = 0 ]; then
+    asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    asdf install nodejs latest
+fi
