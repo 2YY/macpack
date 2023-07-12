@@ -19,6 +19,7 @@ asdf plugin list | grep "nodejs"
 if [ ! $? = 0 ]; then
     asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     asdf install nodejs latest
+    asdf global nodejs latest
 fi
 
 # Install Python
@@ -26,6 +27,7 @@ asdf plugin list | grep "python"
 if [ ! $? = 0 ]; then
     asdf plugin-add python
     asdf install python latest
+    asdf global python latest
 fi
 
 # Install AstroNvim
