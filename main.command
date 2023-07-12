@@ -61,7 +61,7 @@ fi
 chsh -s /usr/local/bin/fish
 
 # Install AstroNvim
-DIR_ASTRO_NVIM="~/.config/nvim/AstroNvim"
+DIR_ASTRO_NVIM="~/.config/nvim/lua/astronvim"
 if [ ! -d "$DIR_ASTRO_NVIM" ]; then
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 fi
