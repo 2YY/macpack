@@ -7,3 +7,5 @@ font:
     y: 6
 shell:
   program: /usr/local/bin/fish
+  args: 
+    - --login
