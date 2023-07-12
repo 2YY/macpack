@@ -14,6 +14,13 @@ brew tap homebrew/cask-fonts
 brew update
 brew bundle --global
 
+# Install asdf
+if !(type "asdf" > /dev/null 2>&1); then
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+  source ~/.asdf/asdf.fish
+  mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+fi
+
 # Install Node.js
 asdf plugin list | grep "nodejs"
 if [ ! $? = 0 ]; then
