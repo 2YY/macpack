@@ -1,10 +1,12 @@
 brew "asdf"
+brew "bat"
 brew "bottom"
 brew "coreutils"
 brew "curl"
 brew "gdu"
 brew "git"
 brew "lazygit"
+brew "lsd"
 brew "neovim"
 brew "ripgrep"
 
