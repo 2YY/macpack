@@ -27,3 +27,9 @@ if [ ! $? = 0 ]; then
     asdf plugin-add python
     asdf install python latest
 fi
+
+# Install AstroNvim
+DIR_ASTRO_NVIM="~/.config/nvim/AstroNvim"
+if [ ! -d "$DIR_ASTRO_NVIM" ]; then
+  git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+fi
