@@ -56,7 +56,7 @@ cp starship.toml ~/.config/starship.toml
 
 # Change default shell to fish
 if ! grep -q "fish" /etc/shells; then
-  sudo echo /usr/local/bin/fish >> /etc/shells
+  sudo sh -c "echo /usr/local/bin/fish > /etc/shells"
 fi
 chsh -s /usr/local/bin/fish
 
