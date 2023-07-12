@@ -30,6 +30,15 @@ if [ ! $? = 0 ]; then
     asdf global python latest
 fi
 
+# Update Alacritty configure file
+DIR_ALACRITTY_CONFIG="~/.config/alacritty"
+if [ ! -d "$DIR_ALACRITTY_CONFIG" ]; then
+  mkdir ~/.config
+  mkdir ~/.config/alacritty
+fi
+rm -f ~/.config/alacritty/alacritty.yml
+cp alacritty.yml ~/.config/alacritty/alacritty.yml
+
 # Install AstroNvim
 DIR_ASTRO_NVIM="~/.config/nvim/AstroNvim"
 if [ ! -d "$DIR_ASTRO_NVIM" ]; then
