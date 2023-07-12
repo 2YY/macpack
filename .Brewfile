@@ -10,6 +10,7 @@ brew "lazygit"
 brew "lsd"
 brew "neovim"
 brew "ripgrep"
+brew "starship"
 
 cask "alacritty"
 cask "font-jetbrains-mono-nerd-font"
