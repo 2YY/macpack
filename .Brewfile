@@ -12,6 +12,8 @@ brew "neovim"
 brew "ripgrep"
 brew "starship"
 
+cask "1password"
 cask "alacritty"
+brew "alfred"
 cask "font-jetbrains-mono-nerd-font"
 cask "google-japanese-ime"
