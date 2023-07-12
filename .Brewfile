@@ -1,6 +1,13 @@
 brew "asdf"
+brew "bottom"
 brew "coreutils"
 brew "curl"
+brew "gdu"
 brew "git"
+brew "lazygit"
+brew "neovim"
+brew "ripgrep"
 
+cask "alacritty"
+cask "font-jetbrains-mono-nerd-font"
 cask "google-japanese-ime"
