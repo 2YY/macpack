@@ -1,16 +1,11 @@
-if status is-interactive
-  # Homebrew 及びそれによってインストールされたコマンドのPATHを通す。
-  eval (/opt/homebrew/bin/brew shellenv)
+# ターミナル起動時にウェルカムメッセージを表示しない。
+set fish_greeting
 
-  # ターミナル起動時にウェルカムメッセージを表示しない。
-  set fish_greeting
+# タブキーで自動補完を採用する。
+bind \t accept-autosuggestion
 
-  # タブキーで自動補完を採用する。
-  bind \t accept-autosuggestion
+# Kiex を使えるようにする。
+test -s "$HOME/.kiex/scripts/kiex.fish"; and source "$HOME/.kiex/scripts/kiex.fish"
 
-  # Kiex を使えるようにする。
-  test -s "$HOME/.kiex/scripts/kiex.fish"; and source "$HOME/.kiex/scripts/kiex.fish"
-
-  # Starship を起動する。
-  starship init fish | source
-end
+# Starship を起動する。
+starship init fish | source
