@@ -1,7 +1,5 @@
 add_newline = false
 
-add_newline = false
-
 [aws]
 symbol = "  "
 
