@@ -15,8 +15,9 @@ brew update
 brew bundle --global
 
 # Install asdf
-if !(type "asdf" > /dev/null 2>&1); then
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+DIR_ASDF="~/.asdf"
+if [ ! -d "${DIR_ASDF}" ]; then
+  git clone https://github.com/asdf-vm/asdf.git "${DIR_ASDF}" --branch v0.12.0
   . "$HOME/.asdf/asdf.sh"
   . "$HOME/.asdf/completions/asdf.bash"
 fi
