@@ -46,6 +46,14 @@ fi
 rm -f ~/.config/fish/config.fish
 cp config.fish ~/.config/fish/config.fish
 
+# Update starship configure file
+DIR_STARSHIP_CONFIG="~/.config"
+if [ ! -d "$DIR_STARSHIP_CONFIG" ]; then
+  mkdir -p ~/.config
+fi
+rm -f ~/.config/starship.toml
+cp starship.toml ~/.config/starship.toml
+
 # Install AstroNvim
 DIR_ASTRO_NVIM="~/.config/nvim/AstroNvim"
 if [ ! -d "$DIR_ASTRO_NVIM" ]; then
