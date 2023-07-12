@@ -54,6 +54,12 @@ fi
 rm -f ~/.config/starship.toml
 cp starship.toml ~/.config/starship.toml
 
+# Change default shell to fish
+if ! grep -q "fish" /etc/shells; then
+  sudo echo /usr/local/bin/fish >> /etc/shells
+fi
+chsh -s /usr/local/bin/fish
+
 # Install AstroNvim
 DIR_ASTRO_NVIM="~/.config/nvim/AstroNvim"
 if [ ! -d "$DIR_ASTRO_NVIM" ]; then
