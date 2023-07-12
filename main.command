@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Install Homebrew
 if !(type "brew" > /dev/null 2>&1); then
@@ -32,36 +32,38 @@ fi
 
 # Update Alacritty configure file
 DIR_ALACRITTY_CONFIG="~/.config/alacritty"
-if [ ! -d "$DIR_ALACRITTY_CONFIG" ]; then
-  mkdir -p ~/.config/alacritty
+if [ ! -d "${DIR_ALACRITTY_CONFIG}" ]; then
+  mkdir -p "${DIR_ALACRITTY_CONFIG}"
 fi
-rm -f ~/.config/alacritty/alacritty.yml
-cp alacritty.yml ~/.config/alacritty/alacritty.yml
+rm -f "${DIR_ALACRITTY_CONFIG}/alacritty.yml"
+cp alacritty.yml "${DIR_ALACRITTY_CONFIG}/alacritty.yml"
 
 # Update fish configure file
 DIR_FISH_CONFIG="~/.config/fish"
-if [ ! -d "$DIR_FISH_CONFIG" ]; then
-  mkdir -p ~/.config/fish
+if [ ! -d "${DIR_FISH_CONFIG}" ]; then
+  mkdir -p "${DIR_FISH_CONFIG}"
 fi
-rm -f ~/.config/fish/config.fish
-cp config.fish ~/.config/fish/config.fish
+rm -f "${DIR_FISH_CONFIG}/config.fish"
+cp config.fish "${DIR_FISH_CONFIG}/config.fish"
 
 # Update starship configure file
 DIR_STARSHIP_CONFIG="~/.config"
-if [ ! -d "$DIR_STARSHIP_CONFIG" ]; then
-  mkdir -p ~/.config
+if [ ! -d "${DIR_STARSHIP_CONFIG}" ]; then
+  mkdir -p "${DIR_STARSHIP_CONFIG}"
 fi
-rm -f ~/.config/starship.toml
-cp starship.toml ~/.config/starship.toml
+rm -f "${DIR_STARSHIP_CONFIG}/starship.toml"
+cp starship.toml "${DIR_STARSHIP_CONFIG}/starship.toml"
 
 # Change default shell to fish
-if ! grep -q "fish" /etc/shells; then
-  sudo sh -c "echo /usr/local/bin/fish > /etc/shells"
+DIR_FISH="/usr/local/bin/fish"
+DIR_SHELLS="/etc/shells"
+if ! grep -q "fish" "${DIR_SHELLS}"; then
+  sudo sh -c "echo ${DIR_FISH} > ${DIR_SHELLS}"
 fi
-chsh -s /usr/local/bin/fish
+chsh -s "${DIR_FISH}"
 
 # Install AstroNvim
 DIR_NVIM="~/.config/nvim"
 if [ ! -d "$DIR_NVIM" ]; then
-  git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+  git clone --depth 1 https://github.com/AstroNvim/AstroNvim "${DIR_NVIM}"
 fi
