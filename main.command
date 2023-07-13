@@ -43,24 +43,21 @@ DIR_ALACRITTY_CONFIG="~/.config/alacritty"
 if [ ! -d "${DIR_ALACRITTY_CONFIG}" ]; then
   mkdir -p "${DIR_ALACRITTY_CONFIG}"
 fi
-rm -f "${DIR_ALACRITTY_CONFIG}/alacritty.yml"
-cp alacritty.yml "${DIR_ALACRITTY_CONFIG}/alacritty.yml"
+cp -f alacritty.yml "${DIR_ALACRITTY_CONFIG}/alacritty.yml"
 
 # Update fish configure file
 DIR_FISH_CONFIG="~/.config/fish"
 if [ ! -d "${DIR_FISH_CONFIG}" ]; then
   mkdir -p "${DIR_FISH_CONFIG}"
 fi
-rm -f "${DIR_FISH_CONFIG}/config.fish"
-cp config.fish "${DIR_FISH_CONFIG}/config.fish"
+cp -f config.fish "${DIR_FISH_CONFIG}/config.fish"
 
 # Update starship configure file
 DIR_STARSHIP_CONFIG="~/.config"
 if [ ! -d "${DIR_STARSHIP_CONFIG}" ]; then
   mkdir -p "${DIR_STARSHIP_CONFIG}"
 fi
-rm -f "${DIR_STARSHIP_CONFIG}/starship.toml"
-cp starship.toml "${DIR_STARSHIP_CONFIG}/starship.toml"
+cp -f starship.toml "${DIR_STARSHIP_CONFIG}/starship.toml"
 
 # Change default shell to fish
 DIR_FISH="/usr/local/bin/fish"
