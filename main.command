@@ -75,3 +75,7 @@ DIR_NVIM="~/.config/nvim"
 if [ ! -d "$DIR_NVIM" ]; then
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim "${DIR_NVIM}"
 fi
+
+# Configure asdf path on fish
+fish -c "source ~/.asdf/asdf.fish"
+fish -c "mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions"
