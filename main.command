@@ -72,3 +72,7 @@ DIR_NVIM="`echo ~/`.config/nvim"
 if [ ! -d "$DIR_NVIM" ]; then
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim "${DIR_NVIM}"
 fi
+
+# Configure Git username/email
+git config --global user.name "2YY"
+git config --global user.email hkgeuobmaoakneotpuhtesnotekheo@gmail.com
