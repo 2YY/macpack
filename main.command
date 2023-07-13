@@ -15,7 +15,7 @@ brew update
 brew bundle --global
 
 # Install asdf
-DIR_ASDF="~/.asdf"
+DIR_ASDF="`echo ~/`.asdf"
 if [ ! -d "${DIR_ASDF}" ]; then
   git clone https://github.com/asdf-vm/asdf.git "${DIR_ASDF}" --branch v0.12.0
   . "$HOME/.asdf/asdf.sh"
@@ -39,21 +39,21 @@ if [ ! $? = 0 ]; then
 fi
 
 # Update Alacritty configure file
-DIR_ALACRITTY_CONFIG="~/.config/alacritty"
+DIR_ALACRITTY_CONFIG="`echo ~/`.config/alacritty"
 if [ ! -d "${DIR_ALACRITTY_CONFIG}" ]; then
   mkdir -p "${DIR_ALACRITTY_CONFIG}"
 fi
 cp -f alacritty.yml ${DIR_ALACRITTY_CONFIG}/alacritty.yml
 
 # Update fish configure file
-DIR_FISH_CONFIG="~/.config/fish"
+DIR_FISH_CONFIG="`echo ~/`.config/fish"
 if [ ! -d "${DIR_FISH_CONFIG}" ]; then
   mkdir -p "${DIR_FISH_CONFIG}"
 fi
 cp -f config.fish ${DIR_FISH_CONFIG}/config.fish
 
 # Update starship configure file
-DIR_STARSHIP_CONFIG="~/.config"
+DIR_STARSHIP_CONFIG="`echo ~/`.config"
 if [ ! -d "${DIR_STARSHIP_CONFIG}" ]; then
   mkdir -p "${DIR_STARSHIP_CONFIG}"
 fi
@@ -68,7 +68,7 @@ fi
 chsh -s "${DIR_FISH}"
 
 # Install AstroNvim
-DIR_NVIM="~/.config/nvim"
+DIR_NVIM="`echo ~/`.config/nvim"
 if [ ! -d "$DIR_NVIM" ]; then
   git clone --depth 1 https://github.com/AstroNvim/AstroNvim "${DIR_NVIM}"
 fi
