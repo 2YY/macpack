@@ -14,6 +14,7 @@ Git Clone して下記コマンドを実行するだけ。
 
 ## 概要
 
+- 今のところ、バックエンドがNode.jsなWeb開発に必要なものしか入っていない。必要なものが増えたら今後追加していく。
 - メインエディタは [Alacritty](https://github.com/alacritty/alacritty) + [AstroNvim](https://astronvim.com/)
 - シェルは [fish](https://fishshell.com/)
 - OSにインストールするものは極力 [Homebrew](https://brew.sh/ja/) で管理
