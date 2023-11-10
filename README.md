@@ -10,7 +10,7 @@ Git Clone して下記コマンドを実行するだけ。
 
 `sh main.command`
 
-※ Gitのユーザ名とパスワードが2YYのものになっているので [main.commandの該当箇所](https://github.com/2YY/macpack/blob/develop/main.command#L77) を予め自分のアカウントの記述に書き換えて下さい。このリポジトリを fork して自分用の設定を管理しても良い。
+※ Gitのユーザ名とパスワードが2YYのものになっているので [main.commandの該当箇所](https://github.com/2YY/macpack/blob/develop/main.command#L100) を予め自分のアカウントの記述に書き換えて下さい。このリポジトリを fork して自分用の設定を管理しても良い。
 
 ## 概要
 
