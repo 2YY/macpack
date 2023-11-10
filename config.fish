@@ -10,8 +10,3 @@ test -s "$HOME/.kiex/scripts/kiex.fish"; and source "$HOME/.kiex/scripts/kiex.fi
 # Starship を起動する。
 starship init fish | source
 
-# asdf のパスを通す。
-source ~/.asdf/asdf.fish
-
-# asdf の補完が効くようにする
-mkdir -p ~/.config/fish/completions; and rm -f -r ~/.config/fish/completions and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
