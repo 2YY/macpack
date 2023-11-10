@@ -76,3 +76,11 @@ fi
 # Configure Git username/email
 git config --global user.name "2YY"
 git config --global user.email hkgeuobmaoakneotpuhtesnotekheo@gmail.com
+
+# Download AstroNvim configure files
+DIR_ASTRO_NVIM_CONFIG="`echo ~/`.config/nvim"
+if [ ! -d "${DIR_ASTRO_NVIM_CONFIG}" ]; then
+  git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+  git clone https://github.com/2YY/astronvim_config ~/.config/nvim/lua/user
+fi
+
