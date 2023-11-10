@@ -18,5 +18,5 @@ Git Clone して下記コマンドを実行するだけ。
 - メインエディタは [Alacritty](https://github.com/alacritty/alacritty) + [AstroNvim](https://astronvim.com/)
 - シェルは [fish](https://fishshell.com/)
 - OSにインストールするものは極力 [Homebrew](https://brew.sh/ja/) で管理
-- 言語のバージョン管理は [asdf](https://asdf-vm.com/) で行う
+- 言語のバージョン管理は [rtx](https://github.com/jdx/rtx) で行う
 - Dockerは [Rancher Desktop](https://rancherdesktop.io/) で動かす

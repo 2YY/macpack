@@ -10,6 +10,7 @@ brew "lazygit"
 brew "lsd"
 brew "neovim"
 brew "ripgrep"
+brew "rtx"
 brew "starship"
 
 cask "1password"

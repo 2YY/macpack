@@ -19,35 +19,22 @@ brew update
 brew bundle --global
 echo "Homebrewのパッケージを更新しました。"
 
-# Install asdf
-DIR_ASDF="`echo ~/`.asdf"
-if [ ! -d "${DIR_ASDF}" ]; then
-  git clone https://github.com/asdf-vm/asdf.git "${DIR_ASDF}" --branch v0.12.0
-  . "$HOME/.asdf/asdf.sh"
-  . "$HOME/.asdf/completions/asdf.bash"
-  echo "asdfをインストールしました。"
-else
-  echo "asdfが既にインストール済のため、asdfのインストールをスキップします。"
-fi
-
 # Install Node.js
-asdf plugin list | grep "nodejs"
+rtx ls | grep "node"
 if [ ! $? = 0 ]; then
-  asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-  asdf install nodejs latest
-  asdf global nodejs latest
-  echo "Node.jsをグローバルにインストールしました。(asdf)"
+  rtx install node@latest
+  rtx use -g node@latest
+  echo "Node.jsをグローバルにインストールしました。"
 else
   echo "Node.jsが既にグローバルにインストールされているため、グローバルへのNode.jsのインストールをスキップします。"
 fi
 
 # Install Python
-asdf plugin list | grep "python"
+rtx ls | grep "python"
 if [ ! $? = 0 ]; then
-  asdf plugin-add python
-  asdf install python latest
-  asdf global python latest
-  echo "Pythonをグローバルにインストールしました。(asdf)"
+  rtx install python@latest
+  rtx use -g python@latest
+  echo "Pythonをグローバルにインストールしました。"
 else
   echo "Pythonが既にグローバルにインストールされているため、グローバルへのPythonのインストールをスキップします。"
 fi
