@@ -7,3 +7,5 @@ bind \t accept-autosuggestion
 # Starship を起動する。
 starship init fish | source
 
+# rtx を有効化する。
+rtx activate fish | source
