@@ -11,6 +11,7 @@ brew "neovim"
 brew "ripgrep"
 brew "rtx"
 brew "starship"
+brew "zoxide"
 
 cask "1password"
 cask "alacritty"
