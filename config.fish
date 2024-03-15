@@ -9,3 +9,6 @@ starship init fish | source
 
 # rtx を有効化する。
 rtx activate fish | source
+
+# zoxide を有効化する。
+zoxide init fish | source
